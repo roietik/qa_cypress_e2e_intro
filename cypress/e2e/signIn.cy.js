@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
 describe('Sign In page', () => {
-  const email = 'radoslaw.grzymala@hotmail.com';
-  const password = 'Radko!23';
-  const username = 'radek';
+  const email = Cypress.env('EMAIL');
+  const password = Cypress.env('PASSWORD');
+  const username = Cypress.env('USERNAME');
 
   beforeEach(() => {
     cy.visit('/user/login');
